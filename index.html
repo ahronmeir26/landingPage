@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hi Tatty</title>
+    <meta
+      name="description"
+      content="A simple landing page that says hi tatty."
+    />
+    <style>
+      :root {
+        --bg-top: #fff4d8;
+        --bg-bottom: #f3b284;
+        --ink: #14213d;
+        --accent: #d94841;
+        --card: rgba(255, 252, 245, 0.74);
+        --line: rgba(20, 33, 61, 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 28%),
+          radial-gradient(circle at bottom right, rgba(217, 72, 65, 0.18), transparent 35%),
+          linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
+      }
+
+      body::before,
+      body::after {
+        content: "";
+        position: fixed;
+        inset: auto;
+        border-radius: 999px;
+        filter: blur(8px);
+        opacity: 0.75;
+        pointer-events: none;
+      }
+
+      body::before {
+        width: 18rem;
+        height: 18rem;
+        top: -4rem;
+        right: -4rem;
+        background: rgba(255, 255, 255, 0.42);
+      }
+
+      body::after {
+        width: 22rem;
+        height: 22rem;
+        bottom: -8rem;
+        left: -7rem;
+        background: rgba(255, 226, 136, 0.4);
+      }
+
+      main {
+        width: min(92vw, 54rem);
+        padding: 2rem;
+      }
+
+      .hero {
+        position: relative;
+        padding: clamp(2.5rem, 5vw, 5rem);
+        border: 1px solid var(--line);
+        border-radius: 2rem;
+        background: var(--card);
+        backdrop-filter: blur(16px);
+        box-shadow: 0 1.5rem 4rem rgba(20, 33, 61, 0.12);
+        text-align: center;
+        animation: rise 700ms ease-out both;
+      }
+
+      .eyebrow {
+        margin: 0 0 1rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        color: rgba(20, 33, 61, 0.72);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(3.5rem, 11vw, 8rem);
+        line-height: 0.95;
+        text-transform: lowercase;
+      }
+
+      .accent {
+        color: var(--accent);
+      }
+
+      .subcopy {
+        max-width: 32rem;
+        margin: 1.5rem auto 0;
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.6;
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(18px) scale(0.98);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          border-radius: 1.5rem;
+        }
+
+        .subcopy {
+          margin-top: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-label="Greeting">
+        <p class="eyebrow">Landing Page</p>
+        <h1>hi <span class="accent">tatty</span>.</h1>
+        <p class="subcopy">
+          A lightweight static page, ready to deploy on Vercel.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
