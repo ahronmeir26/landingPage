@@ -80,14 +80,6 @@
         animation: rise 700ms ease-out both;
       }
 
-      .eyebrow {
-        margin: 0 0 1rem;
-        letter-spacing: 0.24em;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        color: rgba(20, 33, 61, 0.72);
-      }
-
       h1 {
         margin: 0;
         font-size: clamp(3.5rem, 11vw, 8rem);
@@ -97,13 +89,6 @@
 
       .accent {
         color: var(--accent);
-      }
-
-      .subcopy {
-        max-width: 32rem;
-        margin: 1.5rem auto 0;
-        font-size: clamp(1rem, 2vw, 1.25rem);
-        line-height: 1.6;
       }
 
       @keyframes rise {
@@ -117,14 +102,9 @@
           transform: translateY(0) scale(1);
         }
       }
-
       @media (max-width: 640px) {
         .hero {
           border-radius: 1.5rem;
-        }
-
-        .subcopy {
-          margin-top: 1rem;
         }
       }
     </style>
@@ -132,11 +112,7 @@
   <body>
     <main>
       <section class="hero" aria-label="Greeting">
-        <p class="eyebrow">Landing Page</p>
-        <h1>hi <span class="accent">tatty</span>.</h1>
-        <p class="subcopy">
-          A lightweight static page, ready to deploy on Vercel.
-        </p>
+        <h1>hi <span class="accent">tatty!</span></h1>
       </section>
     </main>
   </body>
