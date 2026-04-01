@@ -2,7 +2,11 @@
   "rewrites": [
     {
       "source": "/rso",
-      "destination": "https://rebbi-shirt-order.vercel.app"
+      "destination": "https://rebbi-shirt-order.vercel.app/"
+    },
+    {
+      "source": "/rso/:path*",
+      "destination": "https://rebbi-shirt-order.vercel.app/:path*"
     }
   ],
   "cleanUrls": true,
