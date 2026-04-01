@@ -7,6 +7,14 @@
     {
       "source": "/rso/:path*",
       "destination": "https://rebbi-shirt-order.vercel.app/:path*"
+    },
+    {
+      "source": "/talmudSearch",
+      "destination": "https://talmud-search.vercel.app/"
+    },
+    {
+      "source": "/talmudSearch/:path*",
+      "destination": "https://talmud-search.vercel.app/:path*"
     }
   ],
   "cleanUrls": true,
