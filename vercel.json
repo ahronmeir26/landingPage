@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    {
+      "source": "/rso",
+      "destination": "https://rebbi-shirt-order.vercel.app"
+    }
+  ],
   "cleanUrls": true,
   "trailingSlash": false
 }
