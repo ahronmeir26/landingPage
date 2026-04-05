@@ -15,6 +15,14 @@
     {
       "source": "/talmudSearch/:path*",
       "destination": "https://talmud-search.vercel.app/:path*"
+    },
+    {
+      "source": "/taamim",
+      "destination": "https://taamim.vercel.app/"
+    },
+    {
+      "source": "/taamim/:path*",
+      "destination": "https://taamim.vercel.app/:path*"
     }
   ],
   "cleanUrls": true,
