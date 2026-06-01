@@ -23,6 +23,14 @@
     {
       "source": "/taamim/:path*",
       "destination": "https://taamim.vercel.app/:path*"
+    },
+    {
+      "source": "/shiur",
+      "destination": "https://yeshiva-recordings.vercel.app/shiurim"
+    },
+    {
+      "source": "/shiur/:path*",
+      "destination": "https://yeshiva-recordings.vercel.app/shiurim/:path*"
     }
   ],
   "cleanUrls": true,
